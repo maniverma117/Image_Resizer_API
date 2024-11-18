@@ -26,7 +26,7 @@ A simple Flask-based API for dynamically resizing images. This application fetch
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/image-resizer-api.git
+git clone https://github.com/maniverma117/Image_Resizer_API.git
 cd image-resizer-api
 ```
 
