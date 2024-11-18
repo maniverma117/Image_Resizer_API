@@ -41,7 +41,7 @@ Run the Flask application:
 ```bash
 python app.py
 ```
-By default, the app runs on `http://127.0.0.1:6000`. You can change the port by editing the `app.run()` call in `app.py`.
+By default, the app runs on `http://127.0.0.1:3000`. You can change the port by editing the `app.run()` call in `app.py`.
 
 ---
 
@@ -54,7 +54,12 @@ docker build -t image-resizer .
 
 ### 2. Run the Docker Container
 ```bash
-docker run -d -p 3000:6000 --name image-resizer image-resizer
+docker run -d -p 3000:3000 --name image-resizer image-resizer
+```
+
+### 3. Run the Docker Container Already Dockerised 
+```bash
+docker run -d -p 3000:3000 --name image-resizer maniverma/image-resizer:latest
 ```
 The app will now be accessible at `http://127.0.0.1:3000`.
 
@@ -90,7 +95,7 @@ curl -o resized_image.jpg "http://127.0.0.1:3000/resize-image?url=https://d2lo0t
 ### Enable Debug Mode
 The app runs in debug mode by default. To disable it, set `debug=False` in `app.py`:
 ```python
-app.run(host="0.0.0.0", port=6000, debug=False)
+app.run(host="0.0.0.0", port=3000, debug=False)
 ```
 
 ---
@@ -137,15 +142,3 @@ The API provides clear error messages for invalid inputs:
 - **Limitations**: Only supports JPEG images for now. Extend the `Pillow` functionality to handle other formats like PNG or GIF.
 
 ---
-
-## License
-This project is licensed under the MIT License. See `LICENSE` for details.
-
----
-
-## Contribution
-Contributions are welcome! Please submit a pull request or file an issue for feature requests or bugs.
-
----
-
-Let me know if you need any adjustments or additions!
