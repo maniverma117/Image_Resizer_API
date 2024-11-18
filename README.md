@@ -45,7 +45,7 @@ By default, the app runs on `http://127.0.0.1:3000`. You can change the port by 
 
 ---
 
-## Using Docker (Optional)
+## Using Docker
 
 ### 1. Build the Docker Image
 ```bash
